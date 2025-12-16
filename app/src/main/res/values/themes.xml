@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 앱 전체 테마 -->
+    <style name="Theme.Taking" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#FF7575</item>
+        <item name="colorPrimaryDark">#FF5050</item>
+        <item name="colorAccent">#FF7575</item>
+        <item name="android:statusBarColor">#FF7575</item>
+    </style>
+
+</resources>

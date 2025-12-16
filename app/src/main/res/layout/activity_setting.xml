@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ▩ 스크롤 가능한 설정 화면 -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#FAFAFA"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- 🔥 상단 타이틀 -->
+            <TextView
+                android:id="@+id/txtSettingTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="설정"
+                android:layout_gravity="center"
+                android:textSize="32sp"
+                android:textColor="#000000"
+                android:fontFamily="@font/kopubworld_dotum_pro_bold"
+                android:paddingBottom="20dp"/>
+
+            <!-- 🔥 프로필 카드 -->
+            <LinearLayout
+                android:id="@+id/layoutProfileCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:background="@drawable/rounded_card"
+                android:orientation="vertical"
+                android:layout_marginBottom="25dp">
+
+                <TextView
+                    android:id="@+id/txtUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="로그인이 필요합니다"
+                    android:textSize="20sp"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/kopubworld_dotum_pro_bold"/>
+
+                <TextView
+                    android:id="@+id/txtUserEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14sp"
+                    android:textColor="#FF7575"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+            <!-- 🔥 로그인/로그아웃 버튼 -->
+            <Button
+                android:id="@+id/btnLoginOrLogout"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="로그인하기"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/button_add_record"
+                android:fontFamily="@font/kopubworld_dotum_pro_bold"
+                android:textSize="18sp"
+                android:layout_marginBottom="35dp"/>
+
+            <!-- 🔥 설정 리스트 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- 알림 설정 -->
+                <LinearLayout
+                    android:id="@+id/notificationSettingBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingHorizontal="20dp"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/rounded_card"
+                    android:layout_marginBottom="14dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="알림 설정"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/kopubworld_dotum_pro_medium"
+                        android:textColor="#000000"/>
+                </LinearLayout>
+
+                <!-- 앱 정보 -->
+                <LinearLayout
+                    android:id="@+id/appInfoBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingHorizontal="20dp"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/rounded_card">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="앱 정보"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/kopubworld_dotum_pro_medium"
+                        android:textColor="#000000"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 하단 네비게이션 -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="#F4F4F4"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconSize="28dp"
+        app:itemIconTint="@color/bottom_nav_selector"
+        app:itemTextColor="@color/bottom_nav_selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

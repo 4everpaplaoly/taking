@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 🔥 상단 타이틀 -->
+        <TextView
+            android:id="@+id/txtLoginTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="로그인"
+            android:textColor="#000000"
+            android:textSize="32sp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/kopubworld_dotum_pro_bold"
+            android:paddingBottom="30dp" />
+
+        <!-- 🔥 로그인 입력 카드 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_card"
+            android:padding="22dp">
+
+            <!-- 이메일 -->
+            <TextView
+                android:text="이메일"
+                android:textSize="14sp"
+                android:textColor="#757575"
+                android:layout_marginBottom="6dp"
+                android:fontFamily="@font/kopubworld_dotum_pro_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editEmail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_item_bg"
+                android:paddingHorizontal="14dp"
+                android:textSize="16sp"
+                android:hint="example@email.com"
+                android:fontFamily="@font/kopubworld_dotum_pro_medium"
+                android:layout_marginBottom="20dp" />
+
+            <!-- 비밀번호 -->
+            <TextView
+                android:text="비밀번호"
+                android:textSize="14sp"
+                android:textColor="#757575"
+                android:layout_marginBottom="6dp"
+                android:fontFamily="@font/kopubworld_dotum_pro_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_item_bg"
+                android:paddingHorizontal="14dp"
+                android:textSize="16sp"
+                android:hint="비밀번호 입력"
+                android:inputType="textPassword"
+                android:fontFamily="@font/kopubworld_dotum_pro_medium" />
+        </LinearLayout>
+
+        <!-- 로그인 버튼 -->
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="로그인"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:background="@drawable/button_add_record"
+            android:fontFamily="@font/kopubworld_dotum_pro_bold"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="15dp" />
+
+        <!-- 회원가입 이동 -->
+        <TextView
+            android:id="@+id/txtGoSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아직 계정이 없으신가요? 회원가입"
+            android:textColor="#FF7575"
+            android:textSize="16sp"
+            android:fontFamily="@font/kopubworld_dotum_pro_medium"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+</ScrollView>

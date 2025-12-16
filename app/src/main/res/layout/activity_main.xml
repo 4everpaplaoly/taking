@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- 위쪽 내용 전체 영역 (네비게이션 바 위까지 차지) -->
+    <LinearLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- 오늘의 복용 기록 -->
+        <TextView
+            android:id="@+id/txtTodayTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="오늘의 복용 기록"
+            android:textColor="#000000"
+            android:textSize="28sp"
+            android:fontFamily="@font/kopubworld_dotum_pro_bold"
+            android:layout_gravity="center"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp" />
+
+        <!-- 요일 -->
+        <LinearLayout
+            android:id="@+id/dayContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:weightSum="7"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/dayMon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="월"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:fontFamily="@font/kopubworld_dotum_pro_bold" />
+
+            <TextView
+                android:id="@+id/dayTue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="화"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:fontFamily="@font/kopubworld_dotum_pro_bold" />
+
+            <TextView
+                android:id="@+id/dayWed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="수"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:fontFamily="@font/kopubworld_dotum_pro_bold" />
+
+            <TextView
+                android:id="@+id/dayThu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="목"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:fontFamily="@font/kopubworld_dotum_pro_bold" />
+
+            <TextView
+                android:id="@+id/dayFri"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="금"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:fontFamily="@font/kopubworld_dotum_pro_bold" />
+
+            <TextView
+                android:id="@+id/daySat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="토"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:fontFamily="@font/kopubworld_dotum_pro_bold" />
+
+            <TextView
+                android:id="@+id/daySun"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="일"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:fontFamily="@font/kopubworld_dotum_pro_bold" />
+        </LinearLayout>
+
+        <!-- 요일 하이라이트 바 -->
+        <LinearLayout
+            android:id="@+id/dayHighlightBar"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/highlightView"
+                android:layout_width="30dp"
+                android:layout_height="4dp"
+                android:background="#FF8C8C"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+        <!-- 약 기록 리스트뷰 (가운데 영역을 차지, 스크롤은 이 안에서) -->
+        <ListView
+            android:id="@+id/medicineListView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="16dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp" />
+
+        <!-- 🔥 버튼: 항상 리스트뷰 '아래' + 네비게이션바 '위' -->
+        <Button
+            android:id="@+id/btnAddRecord"
+            android:layout_width="227dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center_horizontal"
+            android:text="기록 추가하기"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:background="@drawable/button_add_record"
+            android:fontFamily="@font/kopubworld_dotum_pro_bold" />
+
+    </LinearLayout>
+
+    <!-- 하단 네비게이션바 (화면 맨 아래 고정) -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="#F4F4F4"
+        app:itemIconSize="28dp"
+        app:itemTextColor="@color/bottom_nav_selector"
+        app:itemIconTint="@color/bottom_nav_selector"
+        app:menu="@menu/bottom_nav_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

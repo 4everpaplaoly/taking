@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- 🔥 전체 스크롤 영역 -->
+    <ScrollView
+        android:id="@+id/scrollViewWeekly"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationViewWeekly"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- ScrollView 안의 모든 콘텐츠 -->
+        <LinearLayout
+            android:id="@+id/contentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- 주간 리포트 타이틀 -->
+            <TextView
+                android:id="@+id/txtWeeklyTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="주간 리포트"
+                android:textColor="#000000"
+                android:fontFamily="@font/kopubworld_dotum_pro_bold"
+                android:textSize="30dp"
+                android:layout_gravity="center"
+                android:paddingTop="13dp"
+                android:paddingBottom="13dp" />
+
+            <!-- 날짜 범위 박스 -->
+            <LinearLayout
+                android:id="@+id/weeklyRangeBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:background="@drawable/button_add_record"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/txtWeeklyRange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11/13 ~ 11/19"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/kopubworld_dotum_pro_bold" />
+            </LinearLayout>
+
+            <!-- 요약 박스 -->
+            <LinearLayout
+                android:id="@+id/summaryBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:background="#FFF0F0"
+                android:layout_marginTop="20dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/txtSummaryTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="이번 주 요약"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/kopubworld_dotum_pro_bold"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/txtSummarySub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="총 12개 복용, 하루 평균 2개"
+                    android:textSize="18sp"
+                    android:textColor="#FF7575"
+                    android:paddingTop="10dp" />
+            </LinearLayout>
+
+            <!-- 🔥 주간 리스트를 직접 넣는 영역 -->
+            <LinearLayout
+                android:id="@+id/weeklyListContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp" />
+
+            <!-- 🔥 AI 요약 박스 -->
+            <TextView
+                android:id="@+id/txtAiSummary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AI 리포트가 여기에 표시됩니다."
+                android:padding="16dp"
+                android:textSize="15sp"
+                android:textColor="#333333"
+                android:background="#F6F6F6"
+                android:layout_marginTop="20dp"
+                android:elevation="2dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- 🔥 하단 네비게이션 -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationViewWeekly"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="#F5F5F5"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@color/bottom_nav_selector"
+        app:itemTextColor="@color/bottom_nav_selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
