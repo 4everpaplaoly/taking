@@ -155,4 +155,7 @@ AI 기반 복약 기록 및 주간 건강 리포트 안드로이드 앱
   <img src="img/setting.png" width="220" />
 </p>
 
+📽️ **앱 시연 영상 (Google Drive)**  
+🔗 [시연 영상 보러가기](https://drive.google.com/file/d/1Rwtvzy_VV_fZ-UC5my4OV_Bz-4l57uXN/view?usp=drive_link)
+
 
