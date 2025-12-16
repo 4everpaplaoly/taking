@@ -136,5 +136,23 @@ AI 기반 복약 기록 및 주간 건강 리포트 안드로이드 앱
 [복약 기록]
 - 약 이름: {medicine}, 증상: {symptom}
 
+## 🖼️ 주요 화면
+
+### 로그인 / 회원가입
+<p align="center">
+  <img src="img/main_login.png" width="220" />
+  <img src="img/main_join.png" width="220" />
+</p>
+
+### 홈 / 기록
+<p align="center">
+  <img src="img/today_taking.png" width="220" />
+  <img src="img/add_taking.png" width="220" />
+</p>
+
+### 설정
+<p align="center">
+  <img src="img/setting.png" width="220" />
+</p>
 
 
